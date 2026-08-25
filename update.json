@@ -1,0 +1,4 @@
+{
+  "version": "1.2.0",
+  "body": "Standards-focused release with corrected admin navigation, guarded ACF integration, stronger AJAX security, accessible inline help, and manifest-first rate-limit-safe GitHub updates."
+}
