@@ -1,40 +1,32 @@
-# TN Help Guides
+# Help Guides (Wiki-style)
 
-Author: Techn
-Version: 1.2.0
+Author: TECHN
+Version: 1.2.1
 Status: Production
 
 ## Purpose
 
-TN Help Guides provides wiki-style documentation inside WordPress admin, including contextual help tabs and inline help attached to configured interface elements.
+Adds the existing Wiki custom post type, Wiki Pages admin interface, screen ID display, contextual help tabs, and class-targeted inline guides.
 
 ## Key Features
 
-- Hierarchical `wiki` custom post type that preserves existing guide content.
-- Accessible wiki browser under the Help Guides admin menu.
-- Contextual WordPress help tabs mapped by screen ID.
-- Inline help targets mapped by local admin URL rules and CSS selectors.
-- Guarded Advanced Custom Fields Pro integration with a clear dependency notice.
-- Capability and nonce protection for AJAX requests.
-- Manifest-first, rate-limit-safe GitHub release updates.
+- Original production Wiki Pages menu and navigation
+- Hierarchical `wiki` post type
+- ACF-powered screen and CSS class mappings
+- Contextual WordPress help tabs
+- Magenta inline guide markers and popovers
+- Native, manifest-first GitHub updates
 
 ## Folder Structure
 
-```text
-help-guides/
-├── help-guides.php
-├── functions/
-├── scripts/
-├── styles/
-└── templates/
-```
+The production plugin remains in its established `Help Guides/` folder with `help_guides.php` as its main file. Runtime modules remain in `includes/`.
 
 ## Important Notes
 
-- Advanced Custom Fields Pro is required for screen mappings and inline targets.
-- Existing `wiki` posts and the original ACF field keys remain compatible.
-- Version 1.1 used a non-standard `Help Guides/help_guides.php` path. Deactivate and remove that copy before installing `help-guides.zip`; the wiki content remains stored in WordPress.
+- Version 1.2.1 preserves the original version 1.1 runtime behaviour and identifiers.
+- Advanced Custom Fields Pro is required by the original mapping features.
+- The GitHub release updater is the only new runtime module.
 
 ## Future Considerations
 
-- Very large guide libraries may benefit from indexed mapping data instead of scanning published guides.
+Any security, accessibility, UI, naming, or architecture changes should be developed and regression-tested separately from this compatibility release.

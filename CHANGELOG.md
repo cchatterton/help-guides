@@ -1,16 +1,22 @@
 # Changelog
 
-All notable changes to TN Help Guides are recorded here.
+All notable changes to Help Guides (Wiki-style) are recorded here.
+
+## 1.2.1 - 2026-08-25
+
+- Restored the original version 1.1 production runtime, menu structure, labels, branding, field definitions, CSS classes, URLs, and interactions without behavioural changes.
+- Added the plugin version constant and GitHub release metadata.
+- Added the required manifest-first updater with public-redirect and API-last fallbacks, short rate-limit backoff, and generic failure notices.
+- Added reproducible release packaging, documentation, and updater-order tests.
 
 ## 1.2.0 - 2026-08-25
 
-- Renamed the visible plugin to TN Help Guides and adopted the standard `help-guides` slug.
-- Corrected the mismatched Help Guides admin menu and custom post type menu slugs.
-- Preserved the existing `wiki` post type and ACF field keys for data compatibility.
-- Added guarded ACF Pro integration and an administrator dependency notice.
-- Added capability checks, nonce verification, local admin URL validation, and safer AJAX responses.
-- Replaced anonymous hooks, generic global functions, hard-coded admin paths, and inline assets.
-- Added keyboard-accessible inline help controls, popovers, tree navigation, focus states, and responsive layout.
-- Stopped removing essential WordPress editor meta boxes.
-- Added manifest-first GitHub updates with redirect and API fallbacks, rate-limit backoff, and generic failure notices.
-- Added standards-compliant documentation and release packaging.
+- Superseded before production deployment because it changed established plugin behaviour.
+
+## 1.1 - 2026-01-02
+
+- Added inline guides.
+
+## 1.0 - 2025-04-01
+
+- Initial plugin.

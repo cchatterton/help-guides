@@ -1,4 +1,4 @@
 {
-  "version": "1.2.0",
-  "body": "Standards-focused release with corrected admin navigation, guarded ACF integration, stronger AJAX security, accessible inline help, and manifest-first rate-limit-safe GitHub updates."
+  "version": "1.2.1",
+  "body": "Compatibility release preserving the original production plugin unchanged while adding standards-compliant, manifest-first GitHub update delivery."
 }

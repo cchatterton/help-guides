@@ -1,21 +1,22 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-PLUGIN_SLUG="help-guides"
+PLUGIN_DIR="Help Guides"
+ASSET_NAME="help-guides.zip"
 DIST_DIR="dist"
 
-rm -rf "$DIST_DIR/$PLUGIN_SLUG"
-rm -f "$PLUGIN_SLUG.zip"
+rm -rf "$DIST_DIR/$PLUGIN_DIR"
+rm -f "$ASSET_NAME"
 mkdir -p "$DIST_DIR"
-cp -R "$PLUGIN_SLUG" "$DIST_DIR/$PLUGIN_SLUG"
+cp -R "$PLUGIN_DIR" "$DIST_DIR/$PLUGIN_DIR"
 
-find "$DIST_DIR/$PLUGIN_SLUG" -name ".DS_Store" -delete
-rm -rf "$DIST_DIR/$PLUGIN_SLUG/node_modules"
+find "$DIST_DIR/$PLUGIN_DIR" -name ".DS_Store" -delete
+rm -rf "$DIST_DIR/$PLUGIN_DIR/node_modules"
 
 (
     cd "$DIST_DIR"
-    rm -f "$PLUGIN_SLUG.zip"
-    zip -qr "$PLUGIN_SLUG.zip" "$PLUGIN_SLUG"
+    rm -f "$ASSET_NAME"
+    zip -qr "$ASSET_NAME" "$PLUGIN_DIR"
 )
 
-cp "$DIST_DIR/$PLUGIN_SLUG.zip" "$PLUGIN_SLUG.zip"
+cp "$DIST_DIR/$ASSET_NAME" "$ASSET_NAME"
