@@ -2,9 +2,9 @@
 /**
  * Plugin Name: Help Guides (Wiki-style)
  * Description: Adds Wiki CPT, Help Guides admin menus, screen ID display, and help tabs.
- * Version: 1.2.2
+ * Version: 1.2.3
  * Requires at least: 7.0
- * Requires PHP: 8.5
+ * Requires PHP: 7.4
  * Update URI: https://github.com/cchatterton/help-guides
  * Author: Techn
  * Author URI: https://techn.com.au
@@ -25,7 +25,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
-define( 'HGW_VERSION', '1.2.2' );
+define( 'HGW_VERSION', '1.2.3' );
 define( 'HGW_PLUGIN_FILE', __FILE__ );
 define( 'HGW_PLUGIN_BASENAME', plugin_basename( __FILE__ ) );
 
