@@ -2,12 +2,15 @@
 /**
  * Plugin Name: Help Guides (Wiki-style)
  * Description: Adds Wiki CPT, Help Guides admin menus, screen ID display, and help tabs.
- * Version: 1.2.1
- * Requires at least: 6.0
- * Requires PHP: 8.1
+ * Version: 1.2.2
+ * Requires at least: 7.0
+ * Requires PHP: 8.5
  * Update URI: https://github.com/cchatterton/help-guides
- * Author: TECHN
- * Author URI: https://techn.com.au/
+ * Author: Techn
+ * Author URI: https://techn.com.au
+ * License: GPL v2 or later
+ * License URI: https://www.gnu.org/licenses/gpl-2.0.html
+ * Techn Controller API: 1
  * Text Domain: help-guides
  * 
  * Release Notes:
@@ -22,7 +25,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
-define( 'HGW_VERSION', '1.2.1' );
+define( 'HGW_VERSION', '1.2.2' );
 define( 'HGW_PLUGIN_FILE', __FILE__ );
 define( 'HGW_PLUGIN_BASENAME', plugin_basename( __FILE__ ) );
 
@@ -36,9 +39,11 @@ $includes = [
     'includes/help-tabs.php',
     'includes/view-guides.php',
     'includes/inline-wiki.php',
-    'includes/github-updater.php',
 ];
 
 foreach ( $includes as $file ) {
     require_once $dir . $file;
 }
+
+require_once __DIR__ . '/includes/controller-client.php';
+tnuc_client_register(__FILE__, 'help-guides');
